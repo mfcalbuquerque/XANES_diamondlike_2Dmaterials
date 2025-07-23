@@ -1,0 +1,11 @@
+&inputpp
+   prefix = 'F-diamane' ,
+   outdir = '/work/mfcaf/',
+   filplot='spin-pol.dat'
+   plot_num=6 ,
+/
+&plot
+   iflag = 3 ,
+   output_format = 5 ,
+   fileout = 'spin-pol.xsf'
+/

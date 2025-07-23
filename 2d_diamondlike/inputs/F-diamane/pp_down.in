@@ -1,0 +1,7 @@
+&BANDS
+   prefix = 'F-diamane' ,
+   outdir = '/work/mfcaf'
+   filband = 'out.bands.F-diamane_down',
+   spin_component = 2,
+   lsym=.true.
+/

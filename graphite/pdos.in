@@ -1,0 +1,11 @@
+&projwfc
+outdir = '/workpar/mfcaf/graphite-ABA/pdos',
+prefix = 'graphite-aba'    ,
+ngauss=0, 
+degauss=0.01470,
+Emin = -5.0,
+Emax = 50.0,
+DeltaE=0.01
+kresolveddos=.false.
+filpdos='graphC27.pdos'     
+/

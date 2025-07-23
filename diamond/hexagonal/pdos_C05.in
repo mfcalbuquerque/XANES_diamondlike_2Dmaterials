@@ -1,0 +1,11 @@
+&projwfc
+outdir='./',
+prefix = 'diam_hcp' ,
+ngauss=0,
+degauss=0.01470,
+Emin = 10.0,
+Emax = 55.0,
+DeltaE=0.01
+kresolveddos=.false.
+filpdos='atom05.pdos'     
+/

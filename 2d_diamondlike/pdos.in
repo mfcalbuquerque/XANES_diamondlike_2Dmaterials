@@ -1,0 +1,11 @@
+&projwfc
+outdir = '/work/mfcaf'
+prefix = 'bi-F-diamane' ,
+ngauss=0, 
+degauss=0.01470,
+Emin = -15.0,
+Emax = 70.0,
+DeltaE=0.01
+kresolveddos=.false.
+filpdos='atomC28.pdos'     
+/

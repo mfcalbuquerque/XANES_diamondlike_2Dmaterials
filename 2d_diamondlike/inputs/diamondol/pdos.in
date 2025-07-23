@@ -1,0 +1,11 @@
+&projwfc
+outdir = '/workpar/mfcaf/bidiamondol-OH_C27',
+prefix = 'bidiamondol_C27' ,
+ngauss=0, 
+degauss=0.01470,
+Emin = -5.0,
+Emax = 50.0,
+DeltaE=0.01
+kresolveddos=.false.
+filpdos='atomC27.pdos'     
+/

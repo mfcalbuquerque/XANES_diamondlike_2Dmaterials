@@ -1,0 +1,6 @@
+&BANDS
+   prefix = 'graphite-aba',
+   outdir = '/workpar/mfcaf/graphite-ABA/bands',
+   filband = 'out.bands.aba'
+   lsym=.true.
+/

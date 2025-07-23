@@ -1,0 +1,11 @@
+&inputpp
+   prefix = 'bi-F-diamane' ,
+   outdir = '/work/mfcaf/',
+   filplot='chg-dens.dat'
+   plot_num=0 ,
+/
+&plot
+   iflag = 3 ,
+   output_format = 5 ,
+   fileout = 'ch-dens.xsf'
+/

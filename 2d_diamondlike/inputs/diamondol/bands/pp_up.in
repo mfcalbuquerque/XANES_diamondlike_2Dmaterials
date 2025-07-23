@@ -1,0 +1,7 @@
+&BANDS
+   prefix = 'bidiamondol_C27' ,
+   outdir = '/workpar/mfcaf/bidiamondol-OH_C27',
+   filband = 'out.bands.diamondol_up.dat',
+   spin_component = 1,
+   lsym=.true.
+/
