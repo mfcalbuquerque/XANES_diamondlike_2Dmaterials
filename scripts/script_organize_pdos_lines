@@ -1,0 +1,68 @@
+#!/bin/bash
+###
+### This script gathers the newly generated files from projwfc.x code and organizes their headers.
+### This script also executes a summation of the prior calculated PDOS.
+### 
+### This script should be run as: ./script  
+
+mkdir test
+cp *\(s\) ./test
+cp *\(p\) ./test
+
+cd test
+
+ls *\(s\) > s-states.txt
+
+ls *\(p\) > p-states.txt
+
+#ls *\(d\) > d-states.txt
+
+for i in `cat s-states.txt`
+do
+	if grep -qwF '# E (eV) ' "$i"
+	then
+		echo "File ${i} is OK!"
+	else
+		vi $i -c 1j4 -c wq
+	fi
+done
+
+for j in `cat p-states.txt`
+do
+	if grep -qwF '# E (eV) ' "$j"
+	then
+		echo "File ${j} is OK!"
+	else
+		vi $j -c 1j6 -c wq
+	fi	
+done
+
+
+cat > script_sumpdos << EOF
+#!/bin/bash
+###
+###
+#######################################################
+### PDOS summation per orbital: s and p
+sumpdos.x *\(s\) > pdos_s-states.dat
+
+sumpdos.x *\(p\) > pdos_p-states.dat
+#######################################################
+### PDOS summation per molecule/solid: diamondol and OH-
+#sumpdos.x *\(C*\)* > carbon_states.dat
+#sumpdos.x *\(O\)* *\(H\)* > molecule_states.dat
+EOF
+
+chmod u+x ./script_sumpdos
+
+./script_sumpdos
+
+cp *.dat ../
+
+cd ..
+
+# for k in `cat d-states.txt`
+# do
+# 	vi $k -c 1j8 -c wq
+# done
+
